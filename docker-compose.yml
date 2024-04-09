@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jupyter:
+    image: retrography/datb:latest
+    build: 
+      context: .
+      args:
+        BUILD_DATE:
+      tags:
+        - retrography/datb:latest
+        - retrography/datb:${BUILD_DATE}
+      dockerfile: Dockerfile
+    volumes:
+      - ~/code:/home/jovyan/work
+    ports:
+      - 8888:8888
+    container_name: datb
