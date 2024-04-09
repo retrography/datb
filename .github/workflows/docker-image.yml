@@ -26,10 +26,6 @@ jobs:
         uses: docker/metadata-action@v5.5.1
         with:
           images: retrography/datb
-          flavor: |
-            latest=true
-          tags: |
-            type=schedule,pattern={{date 'YYYYMMDD'}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5.3.0
