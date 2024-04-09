@@ -27,7 +27,7 @@ jobs:
         with:
           images: retrography/datb
           flavor: |
-            latest=auto
+            latest=true
           tags: |
             type=schedule,pattern={{date 'YYYYMMDD'}}
 
@@ -38,3 +38,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
