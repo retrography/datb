@@ -1,5 +1,5 @@
 services:
-  jupyter:
+  data_academy_toolbox:
     image: retrography/datb:master
     volumes:
       - ~/code:/home/jovyan/work
